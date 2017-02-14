@@ -9,20 +9,20 @@ AI based Real Time Music Synthesis Framework.
 Power of Coda
 -----------------
 1. Music Processing Unit
-  a. Signal Processing
-  b. Chords Recognition
-  c. Beats & Tempo Detection
-  d. MIDI Support
-  e. Timbre Analysis
-  f. Data Visualization
+  * Signal Processing
+  * Chords Recognition
+  * Beats & Tempo Detection
+  * MIDI Support
+  * Timbre Analysis
+  * Data Visualization
   
 2. Intelligent Music Composer
 
 3. Programable Music Interface
-  a. Melodica
-  b. Beat Mixer
-  c. Instruments Toolbox
-  d. FX Kit
+  * Melodica
+  * Beat Mixer
+  * Instruments Toolbox
+  * FX Kit
 
 <a id="documentation"></a>
 Documentation
