@@ -3,8 +3,9 @@ from pylab import *
 import wave
 import CodaUtils as CD
 
-def plot_waveform(track):
-    track = CD.mp3Towav(track)
+#Plots a waveform for Audio File.
+def plot_waveform(track, dest):
+    track = CD.mp3Towav(track, dest)
     spf = wave.open(track,'r')
     sound_info = spf.readframes(-1)
     sound_info = fromstring(sound_info, 'Int16')
@@ -19,6 +20,4 @@ def plot_waveform(track):
     
     show()
     spf.close()
-
-plot_waveform("../Samples/Piano/203458__tesabob2001__a3.mp3")
 
