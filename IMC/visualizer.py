@@ -1,7 +1,9 @@
 import sys
 from pylab import *
 import wave
+import matplotlib.pyplot as plt
 import CodaUtils as CD
+import transforms as tf
 
 #Plots a waveform for Audio File.
 def plot_waveform(track, dest):
@@ -20,4 +22,12 @@ def plot_waveform(track, dest):
     
     show()
     spf.close()
+
+def plotFFT(track):
+    res = tf.FFT(track)
+    l  =list(res)
+    print l.index(max(l))
+    plt.plot(res, 'r')
+    plt.show()
+
 
