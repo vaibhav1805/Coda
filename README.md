@@ -20,7 +20,7 @@ Power of Coda
 
 3. Programable Music Interface
   * Melodica
-  * Beat Mixer
+  * Beat Generator
   * Instruments Toolbox
   * FX Kit
 
