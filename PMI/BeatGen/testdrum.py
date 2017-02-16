@@ -10,5 +10,4 @@ drumMeasure = stream.Measure()
 drumMeasure.append(n)
 drumPart.append(drumMeasure)
 
-# This line actually generate the midi on my mac but there is no relevant software to read it and the opening fail
 drumPart.show('midi')
