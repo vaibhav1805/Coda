@@ -25,8 +25,6 @@ def plot_waveform(track, dest):
 
 def plotFFT(track):
     res = tf.FFT(track)
-    l  =list(res)
-    print l.index(max(l))
     plt.plot(res, 'r')
     plt.show()
 
