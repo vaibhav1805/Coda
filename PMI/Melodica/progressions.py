@@ -6,6 +6,11 @@ types= {
 	"min": [0, 3, 7]
 }
 
+scales={
+	"maj": [0, 2, 4, 5, 7, 9, 11, 12],
+	"min": [0, 2, 3, 5, 7, 8, 10, 12]
+}
+
 
 def getChodSeq(chord, type):
 	nts =[]
@@ -14,4 +19,9 @@ def getChodSeq(chord, type):
 		nts.append(notes[(notes.index(chord)+i)%12])
 	print nts
 
-#getChodSeq(sys.argv[1], "min")
+def getScale(root, type):
+	nts =[]
+	seq = scales[type]
+	for i in seq:
+		nts.append(notes[(notes.index(root)+i)%12])
+	print nts
