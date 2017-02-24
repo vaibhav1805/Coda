@@ -2,6 +2,8 @@ import math
 import wave
 import struct
 import notemap as nm
+import progressions as prog
+import sys
 
 audio = []
 sample_rate = 44100.0
@@ -57,10 +59,9 @@ def save_wav(file_name):
     return
 
 
-notes = ["C", "D", "E", "F", "G", "A", "B"]
+notes = prog.getScale(sys.argv[1], sys.argv[2])
 for i in notes:
-    print nm.getNoteFreq(i, 4)
     append_sinewave(freq=nm.getNoteFreq(i, 4),volume=0.5)
     append_silence()
-append_sinewave(freq=nm.getNoteFreq("C", 5),volume=0.5)
+append_sinewave(freq=nm.getNoteFreq(sys.argv[1], 5),volume=0.5)
 save_wav("output.wav")
