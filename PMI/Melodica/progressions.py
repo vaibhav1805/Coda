@@ -15,16 +15,16 @@ scales={
 }
 
 
-def getChodSeq(chord, type):
+def getChordSeq(chord, ctype):
 	nts =[]
-	seq = types[type]
+	seq = types[ctype]
 	for i in seq:
 		nts.append(notes[(notes.index(chord)+i)%12])
 	return nts
 
-def getScale(root, type):
+def getScale(root, ctype):
 	nts =[]
-	seq = scales[type]
+	seq = scales[ctype]
 	for i in seq:
 		nts.append(notes[(notes.index(root)+i)%12])
 	return nts
