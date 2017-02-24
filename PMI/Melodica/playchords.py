@@ -4,7 +4,8 @@ import progressions as pr
 
 def instr(chord):
 	instrumentPart = stream.Part()
-	instrumentPart.insert(0, instrument.Guitar())
+	''' Instruments class may be changed as per requirements refer to music21/instrument.py'''
+	instrumentPart.insert(0, instrument.Piano())
 	instrumentMeasure = stream.Measure()
 	instrumentMeasure.append(chord)
 	instrumentPart.append(instrumentMeasure)
