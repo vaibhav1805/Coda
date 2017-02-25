@@ -3,6 +3,7 @@ from scipy.io import wavfile
 from scipy.fftpack import fft
 import numpy
 from pylab import *
+import stft
 
 def FFT(f):
 	fs, data = wavfile.read(f)
@@ -43,6 +44,13 @@ def FFT2(f):
 	xlabel('Frequency (kHz)')
 	ylabel('Power (dB)')
 	show()
+
+def STFT(f):
+	fs, audio = wavfile.read(f)
+	specgram = stft.spectrogram(audio)
+	output = stft.ispectrogram(specgram)
+	print output
+
 
 def promFreq(f):
 	res = FFT(f)
